@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+
+    font-family: Georgia, serif;
+
+    color: white;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.20),
+            rgba(0, 0, 0, 0.20)
+        ),
+        url("../img/fondo-login.jpeg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 650px;
+
+    text-align: center;
+
+    padding: 35px 20px;
+}
+
+.sobre {
+    font-size: 60px;
+
+    margin-bottom: 15px;
+
+    animation: latido 1.5s infinite;
+}
+
+.pequeno {
+    color: #ffb6c9;
+
+    text-transform: uppercase;
+
+    letter-spacing: 3px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 35px;
+
+    margin-bottom: 30px;
+}
+
+.carta {
+    padding: 30px 25px;
+
+    min-height: 300px;
+
+    text-align: left;
+
+    background:
+        linear-gradient(
+            rgba(255, 245, 226, 0.96),
+            rgba(255, 232, 210, 0.96)
+        );
+
+    color: #542536;
+
+    border-radius: 5px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.45);
+
+    position: relative;
+}
+
+.carta::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 12px;
+
+    border: 1px solid rgba(130, 70, 80, 0.25);
+
+    pointer-events: none;
+}
+
+#texto-carta {
+    position: relative;
+
+    z-index: 1;
+
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    white-space: pre-wrap;
+}
+
+.cursor {
+    color: #d94d73;
+
+    font-size: 22px;
+
+    animation: parpadear 0.8s infinite;
+}
+
+.volver {
+    margin-top: 30px;
+
+    padding: 12px 25px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    color: rgb(0, 0, 0);
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.volver:hover {
+    background: rgba(255, 92, 138, 0.7);
+
+    transform: translateY(-3px);
+}
+
+@keyframes latido {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+
+}
+
+@keyframes parpadear {
+
+    0%, 50% {
+        opacity: 1;
+    }
+
+    51%, 100% {
+        opacity: 0;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .carta {
+        padding: 25px 20px;
+    }
+
+    #texto-carta {
+        font-size: 16px;
+
+        line-height: 1.8;
+    }
+
+}

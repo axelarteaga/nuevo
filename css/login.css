@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+
+    font-family: Arial, sans-serif;
+
+    color: white;
+
+    background-image:
+        linear-gradient(
+            rgba(60, 20, 45, 0.18),
+            rgba(30, 10, 25, 0.30)
+        ),
+        url("../img/fondo-login.jpeg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+
+    overflow: hidden;
+}
+
+
+/* CONTENEDOR */
+
+.contenedor {
+    width: 100%;
+
+    max-width: 500px;
+
+    padding: 45px 40px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.14);
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    border-radius: 28px;
+
+    backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.25);
+
+}
+
+
+/* CORAZÓN */
+
+.corazon {
+    font-size: 55px;
+
+    margin-bottom: 15px;
+
+    filter:
+        drop-shadow(
+            0 5px 10px rgba(0, 0, 0, 0.25)
+        );
+
+    animation: latido 1.5s infinite;
+}
+
+
+/* TÍTULO */
+
+h1 {
+    font-family: "Brush Script MT", "Segoe Script", cursive;
+
+    font-size: 64px;
+
+    font-weight: normal;
+
+    margin-bottom: 20px;
+
+    color: white;
+
+    text-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+
+/* MENSAJE */
+
+.mensaje-inicial {
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color: white;
+
+    margin-bottom: 30px;
+
+    text-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+
+/* INPUT */
+
+input {
+    width: 100%;
+
+    padding: 18px 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.45);
+
+    outline: none;
+
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.18);
+
+    color: white;
+
+    text-align: center;
+
+    font-size: 18px;
+
+    letter-spacing: 5px;
+
+    backdrop-filter: blur(5px);
+
+    -webkit-backdrop-filter: blur(5px);
+
+    transition: 0.3s;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.80);
+
+    letter-spacing: normal;
+}
+
+input:focus {
+    border-color: rgba(255, 255, 255, 0.8);
+
+    background: rgba(255, 255, 255, 0.23);
+
+    box-shadow:
+        0 0 20px rgba(255, 150, 180, 0.25);
+}
+
+
+/* BOTÓN */
+
+button {
+    width: 100%;
+
+    margin-top: 18px;
+
+    padding: 18px;
+
+    border: none;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff7599,
+            #f4527d
+        );
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px rgba(170, 40, 80, 0.30);
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 30px rgba(170, 40, 80, 0.40);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+
+/* MENSAJE DE ERROR */
+
+#mensaje-error {
+    min-height: 22px;
+
+    margin-top: 15px;
+
+    font-size: 14px;
+
+    color: white;
+
+    text-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ANIMACIÓN DEL CORAZÓN */
+
+@keyframes latido {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+
+}
+
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 18px;
+
+        background-position: center;
+    }
+
+    .contenedor {
+        padding: 35px 22px;
+
+        border-radius: 25px;
+    }
+
+    .corazon {
+        font-size: 48px;
+    }
+
+    h1 {
+        font-size: 52px;
+    }
+
+    .mensaje-inicial {
+        font-size: 15px;
+
+        line-height: 1.6;
+    }
+
+    input {
+        padding: 16px;
+    }
+
+    button {
+        padding: 16px;
+    }
+
+}
