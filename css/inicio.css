@@ -86,12 +86,78 @@ body {
 
 /* TÍTULO */
 
-h1 {
-    font-size: 42px;
-
-    margin-bottom: 25px;
+.logo-af {
+    width: 360px;
+    height: 120px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    
 }
 
+.logo-af svg {
+    width: 60%;
+    height: 100%;
+    overflow: visible;
+}
+
+.letra {
+    fill: none;
+    stroke: #fa3f3fec;
+    stroke-width: 8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+
+    filter: drop-shadow(0 0 6px #fd7bc3);
+
+    animation: dibujar 6s linear infinite;
+}
+
+/* A */
+.letra-a {
+    animation-delay: 0s;
+}
+
+/* & */
+.letra-amp {
+    animation-delay: 1.2s;
+}
+
+/* F */
+.letra-f {
+    animation-delay: 2.4s;
+}
+
+@keyframes dibujar {
+
+    /* Empieza invisible */
+    0% {
+        stroke-dashoffset: 1;
+    }
+
+    /* Se va trazando */
+    20% {
+        stroke-dashoffset: 0;
+    }
+
+    /* Permanece visible */
+    65% {
+        stroke-dashoffset: 0;
+    }
+
+    /* Se borra */
+    80% {
+        stroke-dashoffset: 1;
+    }
+
+    /* Espera antes de comenzar otra vez */
+    100% {
+        stroke-dashoffset: 1;
+    }
+}
 
 /* FECHA */
 
