@@ -96,14 +96,14 @@ body {
 }
 
 .logo-af svg {
-    width: 60%;
+    width: 100%;
     height: 100%;
     overflow: visible;
 }
 
 .letra {
     fill: none;
-    stroke: #fa3f3fec;
+    stroke: #f8f7f7ec;
     stroke-width: 8;
     stroke-linecap: round;
     stroke-linejoin: round;
